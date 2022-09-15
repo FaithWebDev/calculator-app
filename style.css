@@ -1,0 +1,90 @@
+:root {
+    --display: #FFDAB9;
+    --operator: #F4978E;
+    --clear: #F08080;
+    --operand: #f1edee;
+    --equal: #9ea5d9;
+}
+
+/* calc bg is linear gradient : #c5c3c6  to  #c2c0c2*/
+
+body {
+    background-color: #101010;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+#calculator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    background: #ECE9E6;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FFFFFF, #ECE9E6);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    width: 500px;
+    height: fit-content;
+    border-radius: 20px;
+    margin-top: 25px;
+}
+
+
+.display {
+    width: 450px;
+    height: 250px;
+    background-color: var(--display);
+    border-radius: 20px;
+    color: #202020;
+    display: flex;
+    font-size: 9rem;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 50px;
+    box-shadow: 1px 2px 4px rgb(0 0 0 / 55%);
+}
+
+.container {
+    display: grid;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 15px;
+}
+
+button {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: none;
+    background-color: #FFDAB9;
+    font-weight: 600;
+    font-size: 2rem;
+    box-shadow: 1px 2px 4px rgb(0 0 0 / 55%);
+}
+
+.backspace {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.backspace img {
+    width: 45px;
+
+}
+
+.clear, #equal {
+    background-color: var(--clear);
+}
+
+.operator {
+    background-color: var(--operator)
+}
